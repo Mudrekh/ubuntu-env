@@ -18,9 +18,6 @@ trap control_c SIGINT
 
 ### URLs. Get them from their sources
 
-# https://github.com/creationix/nvm#install-script
-NVM_URL="https://raw.githubusercontent.com/creationix/nvm/master/nvm.sh"
-
 # https://github.com/robbyrussell/oh-my-zsh#via-wget
 OH_MY_ZSH_URL="https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh"
 
@@ -37,16 +34,12 @@ apt_get_install zsh byobu
 sh -c "$(wget $OH_MY_ZSH_URL -O -)" -s --batch
 
 apt_get_install curl htop
-apt_get_install git mercurial
 
-# nvm, node and modules
-sh -c "$(wget -qO- $NVM_URL)"
-export NVM_DIR="$HOME/.nvm"
-echo $NVM_DIR
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-nvm install 10
-nvm use 10
-nvm alias default 10
+apt_get_install git
+git config --global user.email "mudrekh@gmail.com"
+git config --global user.name "Mudrekh Goderya"
+
+apt_get_install mercurial
 
 apt_get_install ffmpeg
 # https://gstreamer.freedesktop.org/documentation/installing/on-linux.html?gi-language=c
@@ -56,14 +49,23 @@ apt_get_install gparted
 apt_get_install meld
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O /tmp/google-chrome-stable_current_amd64.deb
-apt_get_install /tmp/google-chrome-stable_current_amd64.deb
+sudo apt install /tmp/google-chrome-stable_current_amd64.deb
 
 apt_get_install openvpn network-manager-openvpn
 apt_get_install samba
 
 apt_get_install vlc
-apt_get_install simplescreenrecorder-lib:i386 simplescreenrecorder
+apt_get_install simplescreenrecorder
+apt_get_install simplescreenrecorder-lib:i386
 
 apt_get_install gimp gimp-plugin-registry
 
 sudo DEBIAN_FRONTEND=noninteractive apt-get autoremove -y
+
+source install_nvm.sh
+source chrome.sh
+source spotify.sh
+source sublime.sh
+
+apt_get_install guake
+apt_get_install 
