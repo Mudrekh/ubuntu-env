@@ -29,9 +29,14 @@ function apt_get_remove {
   sudo apt-get remove -y "$@"
 }
 
+sudo apt update
+sudo apt upgrade
+
 apt_get_install build-essential make
-apt_get_install zsh byobu
+apt_get_install zsh
 sh -c "$(wget $OH_MY_ZSH_URL -O -)" -s --batch
+
+sourch byobu.sh
 
 apt_get_install curl htop
 
@@ -42,6 +47,7 @@ git config --global user.name "Mudrekh Goderya"
 apt_get_install mercurial
 
 apt_get_install ffmpeg
+
 # https://gstreamer.freedesktop.org/documentation/installing/on-linux.html?gi-language=c
 apt_get_install libgstreamer1.0-0 gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-doc gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio
 
@@ -60,13 +66,14 @@ apt_get_install simplescreenrecorder-lib:i386
 
 apt_get_install gimp gimp-plugin-registry
 
-sudo DEBIAN_FRONTEND=noninteractive apt-get autoremove -y
-
 source install_nvm.sh
 source chrome.sh
 source spotify.sh
 source sublime.sh
 source git-kraken.sh
+source slack.sh
 
 apt_get_install guake
-apt_get_install 
+apt_get_install sshpass
+ 
+sudo DEBIAN_FRONTEND=noninteractive apt-get autoremove -y
