@@ -1,5 +1,5 @@
 #!/bin/bash
 
-ln -s ./zsh/zsh_theme ~/.zsh_theme
-ln -s ./zsh/zshrc ~/.zshrc
-ln -s ./zsh/zshenv ~/.zshenv
+cp -rf ./zsh/zsh_theme ~/.zsh_theme
+cp -rf ./zsh/zshrc ~/.zshrc
+cp -rf ./zsh/zshenv ~/.zshenv
