@@ -66,6 +66,7 @@ source install_nvm.sh
 source chrome.sh
 source spotify.sh
 source sublime.sh
+source git-kraken.sh
 
 apt_get_install guake
 apt_get_install 
