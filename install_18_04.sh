@@ -72,6 +72,7 @@ source spotify.sh
 source sublime.sh
 source git-kraken.sh
 source slack.sh
+source aws.sh
 
 apt_get_install guake
 apt_get_install sshpass
