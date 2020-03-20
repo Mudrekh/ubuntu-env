@@ -1,5 +1,7 @@
 #!/bin/bash
 
-cp -rf ./zsh/zsh_theme ~/.zsh_theme
-cp -rf ./zsh/zshrc ~/.zshrc
-cp -rf ./zsh/zshenv ~/.zshenv
+SCRIPTPATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+
+/bin/cp -af $SCRIPTPATH/zsh/zsh_theme/. ~/.zsh_theme
+/bin/cp -af $SCRIPTPATH/zsh/zshrc ~/.zshrc
+/bin/cp -af $SCRIPTPATH/zsh/zshenv ~/.zshenv

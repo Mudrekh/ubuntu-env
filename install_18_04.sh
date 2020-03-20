@@ -75,8 +75,8 @@ source slack.sh
 source aws.sh
 source discord.sh
 source zoom.sh
+source guake.sh
 
-apt_get_install guake
 apt_get_install sshpass
  
 sudo DEBIAN_FRONTEND=noninteractive apt-get autoremove -y
