@@ -7,5 +7,9 @@ sudo apt install -y gnome-tweak-tool
 sudo apt install -y gnome-shell-extensions
 sudo apt install -y chrome-gnome-shell
 
+gnomeshell-extension-manage --install --extension-id 21 # Workspace Indicator
+gnomeshell-extension-manage --install --extension-id 28 # gTile
+gnomeshell-extension-manage --install --extension-id 1085 # Simple Net Speed
 gnomeshell-extension-manage --install --extension-id 1485 # Workspace Matrix
-gnomeshell-extension-manage --install --extension-id 28 #gTile
+
+killall -3 gnome-shell

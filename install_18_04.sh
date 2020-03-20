@@ -74,6 +74,7 @@ source git-kraken.sh
 source slack.sh
 source aws.sh
 source discord.sh
+source zoom.sh
 
 apt_get_install guake
 apt_get_install sshpass
