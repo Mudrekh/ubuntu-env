@@ -36,7 +36,7 @@ apt_get_install build-essential make
 apt_get_install zsh
 sh -c "$(wget $OH_MY_ZSH_URL -O -)" -s --batch
 
-sourch byobu.sh
+source byobu.sh
 
 apt_get_install curl htop
 
@@ -57,7 +57,7 @@ apt_get_install meld
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O /tmp/google-chrome-stable_current_amd64.deb
 sudo apt install /tmp/google-chrome-stable_current_amd64.deb
 
-apt_get_install openvpn network-manager-openvpn
+apt_get_install openvpn network-manager-openvpn network-manager-openvpn-gnome
 apt_get_install samba
 
 apt_get_install vlc
