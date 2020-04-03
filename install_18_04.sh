@@ -76,6 +76,7 @@ source aws.sh
 source discord.sh
 source zoom.sh
 source guake.sh
+source docker.sh
 
 apt_get_install sshpass
  
