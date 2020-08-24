@@ -1,4 +1,6 @@
 #! /bin/bash
 
-sudo apt install docker -y
-sudo apt install docker-compose -y
+curl -fsSL https://get.docker.com -o /tmp/get-docker.sh
+sudo bash /tmp/get-docker.sh
+
+sudo usermod -aG docker $USER
