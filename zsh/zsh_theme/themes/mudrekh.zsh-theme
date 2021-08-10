@@ -3,7 +3,7 @@
 # NPM info
 npm_prompt_info() {
   NPM_LOCATION=$(readlink -f `which npm`)
-  if [[ -z "$OLD_NPM_LOCATION" ]] || [[ $NPM_LOCATION != $OLD_NPM_LOCATION ]]  && [[ -f "./package.json" ]] ; then
+  if [[ -z "$OLD_NPM_LOCATION" ]] || [[ $NPM_LOCATION != $OLD_NPM_LOCATION ]] && [[ -f "./package.json" ]] ; then
     NPM_VERSION=`dirname $NPM_LOCATION | awk '{print $1"/../package.json"}' | xargs grep '"version"' | awk  -F'"' '{print $4}'`
     ZSH_THEME_NPM_PROMPT_PREFIX="%{$fg[green]%}◇%{$reset_color%} "
     ZSH_THEME_NPM_PROMPT_SUFFIX=" $NPM_CHANGED"
@@ -141,9 +141,10 @@ _1LEFT="$_USERNAME $_PATH"
 #_1RIGHT=" ⌚ %{$fg_bold[red]%}[%*] %{$reset_color%}"
 #_1RIGHT="[%*] "
 #_1RIGHT=" %1{⌚%G%} %{$fg_bold[red]%}[%*] "
-_1RIGHT="$(nvm_prompt_info) $(npm_prompt_info) ⌚ %{$fg_bold[red]%}%*"
 
 bureau_precmd () {
+  _1RIGHT="$(nvm_prompt_info) $(npm_prompt_info) ⌚ %{$fg_bold[red]%}%*"
+  
   _1SPACES=`get_space $_1LEFT $_1RIGHT`
   print
   print -rP "$_1LEFT$_1SPACES$_1RIGHT"
